@@ -510,7 +510,7 @@ entry2mit_string_int(krb5_context context, krb5_storage *sp, hdb_entry *ent)
                             &ent->keys.val[i]);
         if (sz == -1) return ENOMEM;
     }
-    for (i = 0; hist_keys && i < ent->kvno; i++) {
+    for (i = 0; hist_keys && i <= ent->kvno; i++) {
         size_t m;
 
         /* dump historical keys */
